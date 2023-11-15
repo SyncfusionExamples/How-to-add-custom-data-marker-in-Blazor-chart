@@ -1,0 +1,53 @@
+﻿@page "/"
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnPointRender="@PointRender"></ChartEvents>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Spline">
+            <ChartMarker Visible="true" Height="10" Width="10" />
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+
+    double temp = 0;
+
+    public class ChartData
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> ConsumerReports = new List<ChartData>
+    {
+        new ChartData{ X= 2005, Y= 15 },
+        new ChartData{ X= 2006, Y= 20 },
+        new ChartData{ X= 2007, Y= 15 },
+        new ChartData{ X= 2008, Y= 20 },
+        new ChartData{ X= 2009, Y= 25 },
+        new ChartData{ X= 2010, Y= 30 },
+        new ChartData{ X= 2011, Y= 25 },
+        new ChartData{ X= 2012, Y= 30 },
+        new ChartData{ X= 2013, Y= 35 },
+        new ChartData{ X= 2014, Y= 30 },
+        new ChartData{ X= 2015, Y= 25 }
+    };
+
+    public void PointRender(PointRenderEventArgs args)
+    {
+        if (args.Point.YValue >= temp)
+        {
+            args.Border.Color = "green";
+            temp = args.Point.YValue;
+        }
+
+        if (args.Point.YValue < temp)
+        {
+            args.Border.Color = "red";
+            temp = args.Point.YValue;
+        }
+    }
+}
