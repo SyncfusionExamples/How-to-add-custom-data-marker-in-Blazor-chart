@@ -1,11 +1,10 @@
-# How-to-add-custom-data-marker-in-Blazor-chart
+# How-to-add-custom-data-marker-in-Blazor-chart 
  
- 
-In this article, we will discuss about how to use the custom view as a chart data marker and how to change data marker appearance based on the Y plot?
+In this article, we will discuss how to change the data marker’s appearance based on the Y plot.
 
-**Customizing data marker appearance using OnPointRender event**
+**Customizing data marker appearance in Blazor chart**
 
-In [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) , the data marker appearance can be changed based on Y value. Blazor chart provide [OnPointRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event for customizing the property before rendering of each point.
+In [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) ,  the appearance of the data marker can be customized based on the Y value. Blazor Chart provides the [OnPointRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event for customizing the properties before rendering of each point.
 
 The following properties are available in the [PointRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html).
 
@@ -19,11 +18,11 @@ The following properties are available in the [PointRenderEventArgs](https://hel
 
 •	[Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Width) – Specifies the current point’s width.
 
-We can customize the marker appearance  based on Y value by specifying the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Shape) , [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Border) and [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Fill) property of the [PointRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html).
+Marker appearance can be customized based on the Y value by specifying the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Shape), [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Border), and [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Fill) properties of the [PointRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html).
 
-The below code example illustrates the marker appearance based on Y value. The Border color is changes to red and green by comparing with previous point of the series.
+The below code example illustrates the marker appearance based on the Y value. The border color changes to red and green by comparing it with the previous point of the series. 
 
-**C#**
+**Index.razor**
 
 ```cshtml
 
@@ -82,11 +81,11 @@ The below code example illustrates the marker appearance based on Y value. The B
 ```
 
 
-The following screenshot illustrate the output of the above code snippet.
+The following screenshot illustrates the output of the above code snippet.
 
 **Output:**
 
-![](/marker-appearence.png)
+![](marker-appearence.png)
 
 **Conclusion**
 
