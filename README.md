@@ -1,4 +1,4 @@
-# How-to-add-custom-data-marker-in-Blazor-chart 
+# How-to-add-custom-data-marker-in-Blazor-chart
  
 In this article, we will discuss how to change the data marker’s appearance based on the Y plot.
 
@@ -96,4 +96,3 @@ You can refer to our [Blazor Chart feature tour](https://www.syncfusion.com/blaz
 For current customers, you can check out our components from the [License and Downloads](https://www.syncfusion.com/sales/teamlicense) page. If you are new to Syncfusion, you can try our 30-day [free trial](https://www.syncfusion.com/downloads/blazor) to check out our other controls.
 
 If you have any queries or require clarifications, please let us know in the comments section below. You can also contact us through our [support forums](https://www.syncfusion.com/forums), [support portal](https://support.syncfusion.com/create), or [feedback portal](https://www.syncfusion.com/feedback/blazor-components?control=charts). We are always happy to assist you!
-
